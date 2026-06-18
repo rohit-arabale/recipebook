@@ -1,53 +1,47 @@
-# 🍽️ BiteBook
+# 🍳 RecipeBook
 
-BiteBook is a full-stack MERN application that allows users to create, share, discover, save, and discuss recipes. Users can manage their own recipes, interact with recipes from other users, and maintain a personalized collection of saved recipes.
+A modern full-stack MERN application for creating, sharing, discovering, and saving recipes.
+
+RecipeBook allows food enthusiasts to publish recipes, interact with other users, save favorite dishes, and manage their personal recipe collection through a clean and responsive interface.
 
 ---
 
 ## ✨ Features
 
-### Authentication & User Management
+### 🔐 Authentication
 
 * User Registration
 * User Login & Logout
 * JWT Authentication
 * Protected Routes
-* User Profile Management
 
-### Recipe Management
+### 🍽️ Recipe Management
 
 * Create Recipes
 * Edit Recipes
 * Delete Recipes
-* Public / Private Recipe Visibility
-* View Individual Recipe Details
+* Public & Private Recipe Visibility
+* View Detailed Recipe Information
 
-### Social Features
+### ❤️ User Interaction
 
-* Comment on Recipes
-* Delete Own Comments
 * Save Favorite Recipes
 * View Saved Recipes
-* Public User Profiles
+* Comment on Recipes
+* Delete Own Comments
 
-### Modern Frontend
+### 👤 User Profiles
 
-* React 18
-* React Router
-* React Query
-* Axios
-* Tailwind CSS
-* Framer Motion
-* Vite
+* View Public Profiles
+* Browse User Recipes
+* Manage Personal Content
 
-### Backend
+### 🎨 Modern UI
 
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* JWT Authentication
-* bcrypt Password Hashing
+* Responsive Design
+* Tailwind CSS Styling
+* Smooth Animations with Framer Motion
+* Fast Performance with Vite
 
 ---
 
@@ -55,7 +49,7 @@ BiteBook is a full-stack MERN application that allows users to create, share, di
 
 ### Frontend
 
-* React
+* React.js
 * Vite
 * React Router DOM
 * React Query
@@ -69,83 +63,70 @@ BiteBook is a full-stack MERN application that allows users to create, share, di
 * Express.js
 * MongoDB
 * Mongoose
-* JWT
+* JWT Authentication
 * bcryptjs
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
-bitebook-main/
-│
+recipebook/
 ├── backend/
 │   ├── config/
 │   ├── controllers/
 │   ├── middleware/
 │   ├── models/
 │   ├── routes/
-│   ├── server.js
-│   └── seed.js
+│   └── server.js
 │
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   ├── context/
-    │   ├── pages/
-    │   ├── utils/
-    │   └── App.jsx
-    │
-    └── vite.config.js
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── context/
+│   │   ├── utils/
+│   │   └── App.jsx
+│   │
+│   └── vite.config.js
+│
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## ⚙️ Installation
+## 🚀 Installation
 
-### 1. Clone the Repository
+### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/bitebook.git
-cd bitebook
+git clone https://github.com/rohit-arabale/recipebook.git
+cd recipebook
 ```
 
----
-
-### 2. Backend Setup
-
-Navigate to backend:
+### Backend Setup
 
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file:
+Create `.env`:
 
 ```env
 PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/bitebook
+MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 ```
 
-Start the backend server:
+Run backend:
 
 ```bash
 npm run dev
 ```
 
-or
-
-```bash
-npm start
-```
-
----
-
-### 3. Frontend Setup
-
-Open a new terminal:
+### Frontend Setup
 
 ```bash
 cd frontend
@@ -153,27 +134,11 @@ npm install
 npm run dev
 ```
 
-Frontend will run on:
+Application:
 
 ```text
-http://localhost:5173
-```
-
-Backend will run on:
-
-```text
-http://localhost:5000
-```
-
----
-
-## 🌱 Seed Sample Data
-
-To populate the database with sample recipes:
-
-```bash
-cd backend
-node seed.js
+Frontend: http://localhost:5173
+Backend : http://localhost:5000
 ```
 
 ---
@@ -184,7 +149,7 @@ node seed.js
 
 ```env
 PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/bitebook
+MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 ```
 
@@ -196,73 +161,62 @@ VITE_API_BASE_URL=http://localhost:5000/api
 
 ---
 
-## 📡 API Endpoints
+## 📡 API Features
 
 ### Authentication
 
-| Method | Endpoint           |
-| ------ | ------------------ |
-| POST   | /api/auth/register |
-| POST   | /api/auth/login    |
-| POST   | /api/auth/logout   |
-| GET    | /api/auth/me       |
-| PUT    | /api/auth/me       |
+* Register User
+* Login User
+* Logout User
+* Get Current User
 
 ### Recipes
 
-| Method | Endpoint                    |
-| ------ | --------------------------- |
-| GET    | /api/recipes                |
-| GET    | /api/recipes/:id            |
-| POST   | /api/recipes                |
-| PUT    | /api/recipes/:id            |
-| DELETE | /api/recipes/:id            |
-| PATCH  | /api/recipes/:id/visibility |
+* Create Recipe
+* Read Recipes
+* Update Recipe
+* Delete Recipe
+* Toggle Visibility
 
 ### Comments
 
-| Method | Endpoint                             |
-| ------ | ------------------------------------ |
-| POST   | /api/recipes/:id/comments            |
-| DELETE | /api/recipes/:id/comments/:commentId |
+* Add Comment
+* Delete Comment
 
-### Saved Recipes
+### Favorites
 
-| Method | Endpoint                 |
-| ------ | ------------------------ |
-| POST   | /api/recipes/:id/save    |
-| DELETE | /api/recipes/:id/save    |
-| GET    | /api/recipes/users/saved |
+* Save Recipe
+* Remove Saved Recipe
+* View Saved Recipes
 
 ---
 
-## 🚀 Future Enhancements
+## 🌟 Future Improvements
 
 * Recipe Image Uploads
-* Recipe Categories
-* Search & Filters
-* Like System
+* Categories & Tags
+* Advanced Search & Filters
 * Recipe Ratings
+* Like System
 * Follow Users
 * Notifications
 * Admin Dashboard
 * Cloud Storage Integration
-* Deployment Support
 
 ---
 
-## 🧪 Learning Objectives
+## 🎯 Learning Outcomes
 
 This project demonstrates:
 
 * Full-Stack MERN Development
-* Authentication with JWT
 * REST API Design
-* MongoDB Relationships
-* React State Management
-* Protected Routes
+* Authentication & Authorization
+* MongoDB Data Modeling
 * CRUD Operations
-* Modern UI Development
+* State Management
+* Responsive UI Development
+* Modern Frontend Architecture
 
 ---
 
@@ -274,6 +228,6 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-Developed as a MERN Stack Recipe Sharing Application.
+Rohit Arabale
 
-Feel free to fork, improve, and contribute.
+Built with React, Node.js, Express, MongoDB, and Tailwind CSS.
